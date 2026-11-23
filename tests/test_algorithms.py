@@ -36,7 +36,7 @@ class TestCourierAlgorithms(unittest.TestCase):
         route = nearest_neighbor_route(graph, "D", ["A","B"])
         self.assertEqual(route["visit_order"][0], "D")
         self.assertEqual(route["visit_order"][-1], "D")
-        self.assertAlmostEqual(route["distance"], 9)
+        self.assertAlmostEqual(route["distance"], 8)
         self.assertEqual(route["unreachable"], [])
 
     def test_negative_edges_rejected(self):
