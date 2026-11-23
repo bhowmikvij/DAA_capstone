@@ -49,6 +49,8 @@ def run():
               f'({p["weight"]} kg, value {p["value"]})')
     print(f"Selected {len(selected)} parcels | total weight={weight} kg | total value={value}")
     print(f"DP table dimensions: {len(dp)} rows x {len(dp[0])} capacity columns")
+    print("DP final row (best value for capacities 0..25):")
+    print("  " + " ".join(str(v) for v in dp[-1]))
 
     customers = sorted({p["customer_id"] for p in selected})
     print("\nPHASE 3A - DIJKSTRA SHORTEST PATHS FROM DEPOT")
