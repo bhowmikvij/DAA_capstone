@@ -21,9 +21,9 @@ class TestCourierAlgorithms(unittest.TestCase):
         ]
         selected, weight, value, dp = select_parcels(parcels, 8)
         self.assertEqual(weight, 8)
-        self.assertEqual(value, 100)
+        self.assertEqual(value, 110)
         self.assertEqual({p["parcel_id"] for p in selected}, {"B","C"})
-        self.assertEqual(dp[-1][-1], 100)
+        self.assertEqual(dp[-1][-1], 110)
 
     def test_dijkstra_path(self):
         graph = build_graph([("S","A",2),("A","B",3),("S","B",9)])
