@@ -67,7 +67,7 @@ Road distances are positive weights. The graph is undirected. Depot ID is `DEPOT
 | Parcel ordering | Merge Sort | O(n log n) |
 | Packing | 0/1 Knapsack DP | O(nW), W = integer capacity |
 | Single-source shortest paths | Dijkstra with adjacency list and linear minimum selection | O(V² + E) |
-| Delivery tour | Nearest Neighbor after shortest-path preprocessing | O(k²) |
+| Delivery tour | Nearest Neighbor with Dijkstra per selected leg | O(k(V² + E) + k²) in this implementation |
 | Benchmarking | Repeated timed runs | Depends on input sizes |
 
 Dijkstra uses a linear minimum search to keep the algorithm easy to understand in a DAA viva. A heap-based implementation can improve sparse-graph performance.
