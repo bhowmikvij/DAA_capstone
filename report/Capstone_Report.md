@@ -105,7 +105,7 @@ Start at the depot. Repeatedly travel to the nearest unvisited selected customer
 
 The heuristic is simple and fast but does not guarantee the globally shortest Hamiltonian tour. Unreachable destinations are listed separately.
 
-**Tour construction complexity:** O(k²) after shortest-path distances are available in the conceptual complete metric graph. This implementation runs Dijkstra for each chosen leg, so its practical cost also includes those shortest-path computations.
+**Tour construction complexity:** The nearest-neighbor choice is O(k²) over k stops when all pairwise shortest-path distances are precomputed. This implementation runs Dijkstra for each chosen leg, so its practical cost is O(k(V² + E) + k²) using the simple Dijkstra implementation.
 
 ## Phase 4 — Performance testing and optimization
 
